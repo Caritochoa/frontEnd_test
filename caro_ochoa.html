@@ -1,0 +1,194 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="carOchoa.css" />
+  </head>
+
+  <body>
+
+    <!--Nav-->
+    <a href="#menu" id="toggle"><span></span></a>
+
+<div id="menu">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+
+     
+   
+      <div id="general_cont">
+      <!-- The video -->
+      <video autoplay muted loop id="myVideo">
+        <source src="agencia.mp4" type="video/mp4" />
+      </video>
+
+      
+      <div class="content">
+        <center><h1>Movida Grafica</h1></center>
+        
+      </div>
+
+      <!-- Section 2 -->
+
+      <div class="section_2">
+        <center>
+          <table>
+            <tr>
+              <th>
+                <h1>
+                  Agencia de Marketing y Publicidad <br />
+                  Bogota
+                </h1>
+              </th>
+              <th>
+                <p>
+                  Movidagrafica es una Agencia de Marketing y Publicidad en<br />
+                  Bogotá - Colombia, con 23 años comprobables de experiencia
+                  en<br />
+                  la ciencia y el arte de crear marcas y logotipos, diseñar<br />
+                  estrategias de marketing, conceptualizar y ejecutar
+                  campañas<br />
+                  publicitarias, realizar producciones audiovisuales (videos
+                  y<br />
+                  fotografías).
+                </p>
+              </th>
+            </tr>
+          </table>
+        
+        <button id = "btn_1" type="button"><p id= "btn_text" >Ver nuestro trabajo</p></button>
+
+        </center>
+      </div>
+      <div class="card_grid">
+        <center>
+          <table id="tabla_grid">
+            <tr>
+              <th><img src="card_1.png" /></th>
+              <th><img src="card_2.png" /></th>
+              <th><img src="card_3.png" /></th>
+              <th><img src="card_4.png" /></th>
+            </tr>
+
+            <tr>
+              <th><img src="card_4.png" /></th>
+              <th><img src="card_3.png" /></th>
+              <th><img src="card_2.png" /></th>
+              <th><img src="card_1.png" /></th>
+            </tr>
+          </table>
+        </center>
+      </div>
+
+      <div><img src="presupuesto.png" /></div>
+    </div wi>
+
+    <footer>
+      <center><table>
+        <tr>
+          <th>
+            <h2>
+              AGENCIA <br />
+              DE MARKETING
+            </h2>
+            <ul>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+            </ul>
+          </th>
+          <th>
+            <h2>
+              AGENCIA <br />
+              DE MARKETING
+            </h2>
+            <ul>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+            </ul>
+          </th>
+          <th>
+            <h2>
+              SERVICIOS<br />
+              DE PUBLICIDAD
+            </h2>
+            <ul>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+            </ul>
+          </th>
+          <th>
+            <h2>
+              MAPA<br />
+              DEL SITIO
+            </h2>
+            <ul>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+              <li><a href="https://www.hola.com">Servicios</a></li>
+            </ul>
+          </th>
+        </tr>
+      </table></center>
+    </footer>
+    <!-- general container closure -->
+<script>
+    var theToggle = document.getElementById('toggle');
+
+// based on Todd Motto functions
+// https://toddmotto.com/labs/reusable-js/
+
+// hasClass
+function hasClass(elem, className) {
+	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
+// addClass
+function addClass(elem, className) {
+    if (!hasClass(elem, className)) {
+    	elem.className += ' ' + className;
+    }
+}
+// removeClass
+function removeClass(elem, className) {
+	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+	if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}
+// toggleClass
+function toggleClass(elem, className) {
+	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(" " + className + " ") >= 0 ) {
+            newClass = newClass.replace( " " + className + " " , " " );
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    } else {
+        elem.className += ' ' + className;
+    }
+}
+
+theToggle.onclick = function() {
+   toggleClass(this, 'on');
+   return false;
+}
+</script>
+  </body>
+</html>
